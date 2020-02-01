@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<bean id="man" class="com.test02.Man"></bean>
+	<bean id="woman" class="com.test02.Woman"></bean>
+
+	<bean id="myAdvice" class="com.test02.MyAspect"></bean>
+
+	<!-- AOP proxy를 만드는 beanFactory -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"></bean>
+	
+	<bean id="myAdvisor" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice" ref="myAdvice" ></property>
+		<property name="expression" value="execution(public * *(..))"></property>
+	</bean>
+	
+	<!-- execution(public * *(..): return타입이 뭐든 상관없다, 이름이 뭐든 상관없다(classWork라는 클래스이름이 들어감),파라미터가 몇개던 상관없다 -->
+	<!-- * 1이나 그 이상 / .. 0이나 그이상??-->
+	<!-- DefaultAdvisorAutoProxyCreator: 프록시라는 객체가 자동으로 마들어질것이다  -->
+
+</beans>

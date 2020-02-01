@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myDate" class="java.util.Date" >
+<!-- 	<property name="year" value="119"></property> -->
+<!-- 	<property name="month" value="11"></property> -->
+<!-- 	<property name="date" value="25"></property> -->
+	<constructor-arg value="2019/12/25"></constructor-arg>
+	</bean>
+	
+	<!-- 생성자와 setter를 한번에 넣어줄 수 있다!! -->
+	<bean id="myDto" class="com.test03.UserDto" >
+		<constructor-arg value="홍길동"></constructor-arg>
+		<property name="per" value="a=1,b=2,c=3"></property>
+		<property name="myDate" ref="myDate"></property>
+	</bean>
+	
+	<bean id="myService" class="com.test03.UserServiceImpl"></bean>
+
+</beans>

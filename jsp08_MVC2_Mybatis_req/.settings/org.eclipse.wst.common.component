@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="jsp08_MVC2_Mybatis_req">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="jsp08_MVC2_Mybatis_req"/>
+        <property name="java-output-path" value="/jsp08_MVC2_Mybatis_req/build/classes"/>
+    </wb-module>
+</project-modules>

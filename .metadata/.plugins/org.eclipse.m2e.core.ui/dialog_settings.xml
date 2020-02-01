@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="jsp08_MVC02_SpringJDBC"/>
+			<item value="Jsp02_MultiDelete_test_spring"/>
+			<item value="jsp08_MVC02_spring"/>
+			<item value="Spring06_AOP"/>
+			<item value="Spring05_Annotation"/>
+			<item value="01_review"/>
+			<item value="Spring04"/>
+			<item value="Spring03"/>
+			<item value="Spring02_Bean"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="jsp08_MVC02_SpringJDBC"/>
+			<item value="Jsp02_MultiDelete_test_spring"/>
+			<item value="jsp08_MVC02_spring"/>
+			<item value="Spring06_AOP"/>
+			<item value="Spring05_Annotation"/>
+			<item value="01_review"/>
+			<item value="Spring04"/>
+			<item value="Spring03"/>
+			<item value="Spring02_Bean"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

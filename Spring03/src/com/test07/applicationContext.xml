@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+
+	<bean id="Ig" class="com.test07.IgTv"></bean>
+	
+	<!-- lazy-init="true" : 객체를 언제 초기화 할 것인지 정함(초기가 아닌 원하는 시점에 생성시킨다-호출할 때 )  -->
+	<bean id="Samsung" class="com.test07.SamsungTv" lazy-init="true"></bean>
+	
+
+</beans>

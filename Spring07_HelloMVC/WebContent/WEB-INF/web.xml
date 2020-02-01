@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>Spring07_HelloMVC</display-name>
+	
+	<!-- param-name의 이름으로 value를 넣어서 프로젝트 전체에서 사용할 수 있다 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	
+	
+	<!--  -->
+	<!-- TODO : 02.listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- TODO : 03.hello-servlet.xml -->
+	<!-- selrvlet 안에서 init param : 해당 서블릿안에서만 객체사용가능  -->
+	<!-- 만약 init param사용하고싶지않으면 hello-servlet.xml 이런식으로 만들어주기 -->
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<!-- 		<init-param> -->
+<!-- 			<param-name>appServlet</param-name> -->
+<!-- 			<param-value>/WEB-INF/spring/appServlet</param-value>		 -->
+<!-- 		</init-param> -->
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>*.ho</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+</web-app>

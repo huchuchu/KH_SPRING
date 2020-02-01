@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 짝꿍 두명의 address / jobaddress 를 생성하자 -->
+	<!-- 한명은 생성자로, 나머지 한명은 setter 값을 주입하자  -->
+	
+	
+	<bean id="han" class="com.test02.Address">
+	 <constructor-arg value="한지수"></constructor-arg>
+	 <constructor-arg value="천안시 서북구 불당동"></constructor-arg>
+	 <constructor-arg value="010-8527-8040"></constructor-arg>
+	</bean>
+	<bean id="jisu" class="com.test02.JobAddress">
+	 <constructor-arg index="0" ref="han"></constructor-arg>
+	 <constructor-arg index="1" value="건물주"></constructor-arg>
+	</bean>
+	
+	<bean id="hong" class="com.test02.Address">
+	<property name="name" value="홍유미"></property>
+	<property name="addr" value="용인시 처인구"></property>
+	<property name="tel" value="010-4557-0990"></property>
+	</bean>
+	
+	<bean id="yumi" class="com.test02.JobAddress">
+	<property name="addr" ref="hong"></property>
+	<property name="jobName" value="개발자"></property>
+	</bean>
+	
+	
+</beans>

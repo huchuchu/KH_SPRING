@@ -1,0 +1,76 @@
+main, body{
+    height: 100%;
+    width: 100%
+}
+
+.container{
+    width: 100%;
+    margin: 0px;
+}
+
+.row{
+	width: 100%;	
+}
+
+aside{
+	padding-bottom: 25px;
+}
+
+#view_sidebar {
+    background-color: #2c3e50;
+    width: 200px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left 0.5s ease;
+    color: blue;
+}
+
+
+#view_sidebar.visible{
+    left: 0px;
+    background-color: #e4e4e4;
+    transition: left 0.7s ease;
+}
+
+#header {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    transition: left 0.5s ease;
+}
+
+
+#content {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    padding-bottom: 54.25%;
+    height: 0px;
+}
+
+.fa-bars {
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+}
+
+#side_content_container {
+    overflow-y: scroll;
+}
+
+.list-group-item{ cursor: pointer; }
+
+#bookmark_group {
+	position: absolute;
+	right: 0;
+	width: 100%;
+}
+
+#bookmark_btn {
+	position: relative;
+}

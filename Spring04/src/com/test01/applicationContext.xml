@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="bar" class="com.test01.Bar"></bean>		
+	<bean id="date" class="java.util.Date"></bean>
+	
+	<bean id="hoo" class="com.test01.Score">
+	<property name="math" value="50"></property>
+	<property name="name" value="hoho"></property>
+	<property name="kor" value="40"></property>
+	<property name="eng" value="20"></property>
+	</bean>
+	
+	
+	
+	<bean id="foo" class="com.test01.Foo" lazy-init="true">
+	<constructor-arg ref="date"></constructor-arg>
+	
+	<!-- setBar(bar)호출, setDate(d)호출! -->
+	<property name="bar" ref="bar"></property>
+	<property name="date" ref="date"></property>
+	
+	<!-- setNumber(int num)호출! -->
+	<!-- 	<property name="number" value="100"></property> -->
+	<property name="number">
+		<value type="int">100</value>
+	</property>
+	
+	<!-- setStudent 호출! -->
+	<property name="studetn">
+		<array>
+			<value>유슬기</value>
+			<value>한지수</value>
+			<value>홍유미</value>	
+		</array>	
+	</property>
+	
+	<!-- setInfo 호출! -->
+	<property name="info">
+		<list>
+			<value>봄</value>
+			<value>여름</value>
+			<value>가을</value>
+			<value>겨울</value>
+		</list>	
+	</property>	
+	
+	<property name="event">
+		<set>
+			<value>알라딘</value>	
+			<value>재밌당</value>
+		</set>
+
+	</property>
+	
+	<property name="season">
+		<map>
+		<entry key="1" value="봄"></entry>
+		<entry>
+		<key><value>2</value></key>
+		<value>여름</value>
+		</entry>
+		<entry key="3" value="가을"></entry>
+		<entry key="4" value="겨울"></entry>
+		</map>	
+	</property>
+	
+	<!-- 6월27일 -->
+	<!-- 한 명은 inner Bean으로  한명은 ref로 bean 생성 -->
+	<!-- setScore() 호출! -->
+	<property name="score">
+	<list>
+	<bean id="yoo" class="com.test01.Score" >
+		<property name="name" value="유슬기"></property>
+		<property name="kor" value="100"></property>
+		<property name="eng" value="100"></property>
+		<property name="math" value="100"></property>
+	</bean>	
+	<ref bean="hoo"/>	
+	</list>
+	</property>
+	
+	
+	
+	</bean>
+
+</beans>

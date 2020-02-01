@@ -1,0 +1,45 @@
+2019-07-05
+
+1. pom.xml - ojdbc6, mybatis, mybatis-spring, commons-dbcp, spring-orm
+	(root-context.xml appSErvlet폴더로 옮기고 applicationContext.xml로 이름변경)
+2. web.xml = *.do, filter
+3. WEB-INF/spring/slqls/test.sql
+4. src/main/resources/properties/db.properties파일
+5. src/main/resources/sqls/mapper.xml
+6. WEB-INF/spring/slqls/config.xml
+7. applicationContext.xml 에서 db설정(공통적으로 다 쓸  수 있으니까)
+8. dto, dao, biz,(config, mapper, controller,....)
+
+---------------------------------------------------------------
+2019-07-08 
+<AOP>
+
+9.pom.xml- aspectjweaver, aspectjrt  // ★★★★버전 맞춰주는게 중요!!! 안맞춰주면 에러남!!!★★★★
+10. com.my.common.aop(LogAop.java)
+11. WEB-INF/spring/appServlet/aop-context.xml 생성
+12. web.xml에 aopcontext추가 (innit pararm에 추가함)
+
+13. src/main/recources log4j.xml
+
+---------------------------------------------------------------
+<filter>
+
+14. pom.xml - commons-lang3 (org.apache.commons)
+15. com.my.mvc.common.filter(LogFilter.java impl javax.serVlet.Filter)
+16. web.xml에서 filter적용
+
+
+
+---------------------------------------------------------------
+2019-07-09
+<login>
+17. pom.xml - jackson-core, jackson-mapper : 자바객체를 json으로 바꿔줄 때 jackson을 주로 사용함 
+	<version>1.9.13</version> 버전 사용했는데  <org.springframework-version> 가 4이상 버전이면 다른 거 사용해야함 
+18. login.jsp 페이지 생성
+
+
+
+
+
+
+

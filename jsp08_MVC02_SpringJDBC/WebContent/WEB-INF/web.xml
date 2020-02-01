@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>jsp08_MVC02_SpringJDBC</display-name>
+<!--   <welcome-file-list> -->
+<!--     <welcome-file>index.jsp</welcome-file> -->
+<!--   </welcome-file-list> -->
+  
+
+
+  	<!-- context-param(applicationContext) -->
+  	<!-- applicationContext.xml: 데이터베이스 관련내용, 프로젝트 전체에서 사용되는 내용들★ -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<!-- listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  
+  <!-- 서블릿에 관련된 스프링 설정파일이름 (spr-servlet.xml) -->
+  <!-- servlet() -->
+  <servlet>
+    <servlet-name>spr</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+    	<param-name>sprServlet</param-name>
+    	<param-value>/WEB-INF/spr-servlet.xml</param-value>
+    </init-param>
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spr</servlet-name>
+    <url-pattern>*.spr</url-pattern>
+  </servlet-mapping>
+  
+  <!-- encoding filter -->
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  		<init-param>
+  			<param-name>encoding</param-name>
+  			<param-value>UTF-8</param-value>
+  		</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- /* : 최상위계층부터 모든 것들에게 적용 -->
+  
+  
+  
+  
+</web-app>

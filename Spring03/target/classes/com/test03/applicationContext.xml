@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 강호동 2000000 기술1팀 -->
+	<!-- 유재석 2500000 개발1팀 -->
+	
+	<!-- 생성자를 사용할 때는 받아주는 생성자가 있는지 꼭 확인! -->
+	<bean id="hodong" class="com.test03.Engineer">
+	<constructor-arg value="강호동"></constructor-arg>
+	<constructor-arg value="200000"></constructor-arg>
+<!-- 	<constructor-arg value="기술1팀"></constructor-arg> -->
+	<property name="dept" value="기술1팀"></property>
+	</bean>
+	
+	<bean id="jaesuk" class="com.test03.Developer">
+	<constructor-arg value="유재석"></constructor-arg>
+	<constructor-arg  value="2500000"></constructor-arg>
+	<property name="dept" value="개발1팀"></property>
+	</bean>
+	
+	
+	
+	
+
+
+</beans>

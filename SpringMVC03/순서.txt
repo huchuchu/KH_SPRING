@@ -1,0 +1,8 @@
+1. pom.xml - ojdbc6, mybatis, mybatis-spring, commons-dbcp, spring-orm
+	(root-context.xml appSErvlet폴더로 옮기고 applicationContext.xml로 이름변경)
+2. web.xml = *.do, filter
+3. WEB-INF/spring/sqls/test.sql
+4. src/main/resources/properties/db.properties파일
+5. src/main/resources/sqls/mapper.xml
+6. WEB-INF/spring/sqls/config.xml
+7. applicationContext.xml 에서 db설정(공통적으로 다 쓸  수 있으니까)
